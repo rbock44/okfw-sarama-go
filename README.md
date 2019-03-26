@@ -1,2 +1,3 @@
-# okfw-sarama-go
-Opinionated Kafka Framework Sarama Implementation
+# Opinionated Kafka Framework - Implementation with Samara Framework
+
+Implements the OKF with samara.

@@ -2,7 +2,6 @@ package sarama
 
 import (
 	"github.com/rbock44/okfw-kafka-go/kafka"
-	logapi "github.com/rbock44/okfw-logapi-go/logapi"
 )
 
 //FrameworkFactory creates consumer and provider for the okfw-kafka-go
@@ -33,7 +32,6 @@ func (f *FrameworkFactory) NewSchemaResolver() (kafka.SchemaResolver, error) {
 }
 
 //NewFrameworkFactory creates the consumer and provider factory
-func NewFrameworkFactory(brokers []string, logImpl logapi.Logger) *FrameworkFactory {
-	logger = logImpl
+func NewFrameworkFactory(brokers []string) *FrameworkFactory {
 	return &FrameworkFactory{Brokers: brokers}
 }

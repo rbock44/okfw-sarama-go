@@ -25,3 +25,8 @@ func (l saramaLogger) Println(args ...interface{}) {
 func init() {
 	ss.Logger = saramaLogger{}
 }
+
+//SetLogger sets the logger implementation
+func SetLogger(logImpl logapi.Logger) {
+	logger = logImpl
+}

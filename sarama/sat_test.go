@@ -20,7 +20,8 @@ func (h *testHandler) Handle(context *kafka.MessageContext, key []byte, value []
 
 func TestMessage_SendAndReadMessage(t *testing.T) {
 	os.Setenv("LOG_LEVEL", "debug")
-	factory := NewFrameworkFactory([]string{"localhost:9092"}, zerolog.NewLogger())
+	SetLogger(zerolog.NewLogger())
+	factory := NewFrameworkFactory([]string{"localhost:9092"})
 	testTopic := "test_topic"
 	testClientID := "sat_test"
 	numberOfTestMessages := 10

@@ -1,6 +1,8 @@
 package sarama
 
 import (
+	"fmt"
+
 	"github.com/rbock44/okfw-kafka-go/kafka"
 )
 
@@ -21,14 +23,11 @@ func (f *FrameworkFactory) NewProducer(topic string, clientID string) (kafka.Mes
 
 //NewSchemaResolver creates a new registry
 func (f *FrameworkFactory) NewSchemaResolver() (kafka.SchemaResolver, error) {
-	/*
-		_, err := getKafkaSchemaClient().Subjects()
-		if err != nil {
-			return nil, fmt.Errorf("cannot query subjects on kafka registry [%s]", err.Error())
-		}
-		return newSchemaResolver(), nil
-	*/
-	return nil, nil
+	_, err := getKafkaSchemaClient().Subjects()
+	if err != nil {
+		return nil, fmt.Errorf("cannot query subjects on kafka registry [%s]", err.Error())
+	}
+	return newSchemaResolver(), nil
 }
 
 //NewFrameworkFactory creates the consumer and provider factory

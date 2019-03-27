@@ -2,9 +2,17 @@ package kafka
 
 import (
 	"io"
+
+	"github.com/rbock44/okfw-log-go/logapi"
 )
 
 var fwFactory Provider
+var logger logapi.Logger
+
+//SetLogger sets the logger implementation
+func SetLogger(logImpl logapi.Logger) {
+	logger = logImpl
+}
 
 //SetFrameworkFactory sets the provider that generates the consumer and producers of the used kafka framework
 func SetFrameworkFactory(provider Provider) {

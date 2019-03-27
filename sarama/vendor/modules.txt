@@ -17,8 +17,10 @@ github.com/pierrec/lz4
 github.com/pierrec/lz4/internal/xxh32
 # github.com/pmezard/go-difflib v1.0.0
 github.com/pmezard/go-difflib/difflib
-# github.com/rbock44/okfw-kafka-go/kafka v0.0.0-20190326112115-12e9670fbf0c
+# github.com/rbock44/okfw-kafka-go/kafka v0.0.0-20190327071600-3d72723ee110
 github.com/rbock44/okfw-kafka-go/kafka
+# github.com/rbock44/okfw-log-go v0.0.0-20190326141108-b9175eb2e46e
+github.com/rbock44/okfw-log-go/logapi
 # github.com/rbock44/okfw-logapi-go v0.0.0-20190326141108-b9175eb2e46e
 github.com/rbock44/okfw-logapi-go/logapi
 # github.com/rbock44/okfw-zerolog-go v0.0.0-20190326142918-6ea5471a9eee
